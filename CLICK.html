@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Click Counter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+
+      h1 {
+        color: #333;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: 20px;
+        color: #777;
+      }
+
+      #clickCountDisplay {
+        font-size: 36px;
+        font-weight: bold;
+        color: #ff5722;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+    <script>
+      let clickCount = 0;
+
+      function incrementClickCount() {
+        clickCount++;
+        document.getElementById("clickCountDisplay").innerText = clickCount;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Click Counter</h1>
+    <p>Clicks: <span id="clickCountDisplay">0</span></p>
+    <button onclick="incrementClickCount()">Click Me!</button>
+  </body>
+</html>
